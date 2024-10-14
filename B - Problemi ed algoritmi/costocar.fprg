@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="kevin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-12 01:39:03 "/>
+        <attribute name="created" value="a2V2aW47REVLU1RPUDsyMDIzLTA5LTI3OyIwNzo1MDowOSAiOzIyODA="/>
+        <attribute name="edited" value="a2V2aW47REVLU1RPUDsyMDIzLTA5LTI3OyIwODoxMDo1MCAiOzE7MjM4MQ=="/>
+        <attribute name="edited" value="a2V2aW4ucGFuZXR0YTtMQUJFMS1QQzI7MjAyMy0xMC0xMjsiMDE6Mzk6MDMgIjsxOzMxOTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;amr elsayed 3h&quot;" newline="True"/>
+            <declare name="costo1, costo7, consumo, distanza, costocarburante" type="Integer" array="False" size=""/>
+            <output expression="&quot;scrivi il consumo di litri per km, la distanza e il costo carburante&quot;" newline="True"/>
+            <input variable="consumo"/>
+            <input variable="distanza"/>
+            <input variable="costocarburante"/>
+            <assign variable="costo1" expression="(distanza/consumo)*costocarburante"/>
+            <assign variable="costo7" expression="costo1*7"/>
+            <output expression="costo1" newline="True"/>
+            <output expression="costo7" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

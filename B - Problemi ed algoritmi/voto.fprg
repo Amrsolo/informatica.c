@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="kevin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-12 01:34:54 "/>
+        <attribute name="created" value="a2V2aW47REVLU1RPUDsyMDIzLTA5LTI3OyIwNzoyNDoxNCAiOzIyNzc="/>
+        <attribute name="edited" value="a2V2aW47REVLU1RPUDsyMDIzLTA5LTI3OyIwNzozMTozNSAiOzE7MjM4Ng=="/>
+        <attribute name="edited" value="a2V2aW4ucGFuZXR0YTtMQUJFMS1QQzI7MjAyMy0xMC0xMjsiMDE6MzQ6NTQgIjsxOzMxOTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Amr Elsayed 3H&quot;" newline="True"/>
+            <declare name="voto1, voto2, media" type="Integer" array="False" size=""/>
+            <output expression="&quot;inserisci il primo voto&quot;" newline="True"/>
+            <input variable="voto1"/>
+            <output expression="&quot;inserisci il secondo voto&quot;" newline="True"/>
+            <input variable="voto2"/>
+            <assign variable="media" expression="(voto1+voto2)/2"/>
+            <output expression="media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

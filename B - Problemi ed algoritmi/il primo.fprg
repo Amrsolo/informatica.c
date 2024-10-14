@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="kevin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-12 01:30:29 "/>
+        <attribute name="created" value="a2V2aW47REVLU1RPUDsyMDIzLTA5LTI3OyIwODoxMDo1OCAiOzIyODE="/>
+        <attribute name="edited" value="a2V2aW47REVLU1RPUDsyMDIzLTA5LTI3OyIwODozMTozNiAiOzE7MjM4OA=="/>
+        <attribute name="edited" value="a2V2aW4ucGFuZXR0YTtMQUJFMS1QQzI7MjAyMy0xMC0xMjsiMDE6MzA6MjkgIjszOzMxOTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Amr Elsayed 3H&quot;" newline="True"/>
+            <declare name="egitto, calorieacquisite, calorieconsumate, bilancio" type="Integer" array="False" size=""/>
+            <output expression="&quot;scrivi calorie acquisite&quot;" newline="True"/>
+            <input variable="calorieacquisite"/>
+            <output expression="&quot;scrivi calorie consumate&quot;" newline="True"/>
+            <input variable="calorieconsumate"/>
+            <assign variable="egitto" expression="2500"/>
+            <assign variable="bilancio" expression="egitto-calorieacquisite-calorieconsumate"/>
+            <output expression="&quot;il bilancio giornaliero &#232;: &quot;" newline="False"/>
+            <output expression="bilancio" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

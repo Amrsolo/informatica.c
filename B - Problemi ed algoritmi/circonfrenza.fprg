@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="kevin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-12 01:36:25 "/>
+        <attribute name="created" value="a2V2aW47REVLU1RPUDsyMDIzLTA5LTI3OyIwNzozMTo1MCAiOzIyNzU="/>
+        <attribute name="edited" value="a2V2aW47REVLU1RPUDsyMDIzLTA5LTI3OyIwNzo0OTo0NiAiOzE7MjM5Nw=="/>
+        <attribute name="edited" value="a2V2aW4ucGFuZXR0YTtMQUJFMS1QQzI7MjAyMy0xMC0xMjsiMDE6MzY6MjUgIjsxOzMxOTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Elsayed Amr 3H&quot;" newline="True"/>
+            <declare name="area, circonferenza, raggio, pigreco" type="Integer" array="False" size=""/>
+            <output expression="&quot;inserisci il raggio del cerchio&quot;" newline="True"/>
+            <input variable="raggio"/>
+            <assign variable="pigreco" expression="3.14"/>
+            <assign variable="area" expression="pigreco*raggio^2"/>
+            <output expression="&quot;l'area del cerchio &#232;:&quot;" newline="True"/>
+            <output expression="area" newline="True"/>
+            <assign variable="circonferenza" expression="2 * raggio * pigreco"/>
+            <output expression="&quot;la circonferenza del cerchio &#232;:&quot;" newline="True"/>
+            <output expression="circonferenza" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
