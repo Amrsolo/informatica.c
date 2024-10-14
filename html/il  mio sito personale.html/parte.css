@@ -1,0 +1,22 @@
+header
+{
+    color: rgb(149, 0, 255);
+    background-color: black;
+    font-size: large;
+    font-style: calc(capitalize) ;font-weight: 200;text-align: center;
+}
+
+.h3
+{   color: #0040ff; background-color: black;
+    font-size: medium;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-style: initial;
+}
+
+.body
+{   
+    color: #0040ff;background-color: black;
+
+}
+......backimg.....
+{
+    .background-image: url(https://eu-images.contentstack.com/v3/assets/blt7dcd2cfbc90d45de/blt7074f7f53ea9dc54/60dc11cc22d24e38a38c2ebe/seffren_motus-22515-42mm.jpg?format=pjpg&auto=webp&quality=75%2C90&width=3840); padding: 70%;
+}

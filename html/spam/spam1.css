@@ -1,0 +1,57 @@
+header
+{   
+    background-color: black;
+    color: bisque;
+    padding: 50px;
+
+}
+
+
+.highlight {
+    font-weight: bold; text-align: left;
+    color: #2f00ff;
+    background-image: url(https://www.partitaiva.it/wp-content/uploads/2023/06/Apple-Business-guida.jpg);
+    padding: 250px; 
+}
+
+.macbook
+{
+    color: rgb(104, 188, 252);
+    
+    background-image: url(https://helios-i.mashable.com/imagery/reviews/03y8gbj1mqCuexgXxFJ5vyX/hero-image.fill.size_1248x702.v1623391330.jpg);
+    padding: 180px;
+}
+
+.iphone
+{
+    color: rgb(199, 95, 255);
+    background-image: url(https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-iphone-13-pro-max-graphite-2023?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1679072989055);
+    padding: 250px;
+}
+
+
+.airpods
+{
+    color: rgb(255, 204, 0);
+    background-image: url(https://cdn.mos.cms.futurecdn.net/GaiRBeuWXEQELwqSr4XUR-1200-80.jpg);
+    padding: 300px;
+}
+.spam
+{
+    color: black;
+
+}
+
+.airpodsmodels
+{
+    color: rgb(28, 194, 209);
+    background-color: bisque;
+    font-family: 'satisfy',cursive;
+
+}
+
+.headairpods
+{
+    font-family: 'great vibes',cursive;
+
+}

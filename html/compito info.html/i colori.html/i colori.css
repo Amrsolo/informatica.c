@@ -1,0 +1,40 @@
+.head
+{
+    background-image: url(https://worldglocalenglish.files.wordpress.com/2020/05/nuove-tecnologie.jpg);
+    color: #ce58d2;
+    line-height: 1.5;  /* l'altezza delle righe è possibile usare px,rem,.....*/
+    text-align: center;
+    word-spacing: 1px; /* lo spazio tra le parole*/
+    letter-spacing: 0.5px; /* lo spazio tra le lettere*/
+    text-transform: capitalize; /*così le parole iniziano con lettere maiuscoli */
+}
+
+.body
+{
+    background: linear-gradient(#5158d3, #ce58d2);
+    text-align: left;
+    word-spacing: 1.5px;
+    text-transform: capitalize;background-image: url(https://m.media-amazon.com/images/I/61IduqXygwL._AC_UY350_.jpg);
+}
+.span1
+{
+    text-align: left;
+    line-height: 1.5;  
+    word-spacing: 1px; 
+    letter-spacing: 0.5px;
+    color: #ce58d2;
+    text-transform: capitalize; 
+   
+ 
+   
+
+}
+
+
+
+.span2
+{
+    color: blue;
+    font-size: large;font-family: Arial,sans-serif;font-weight: 100;font-style: italic;
+    
+}

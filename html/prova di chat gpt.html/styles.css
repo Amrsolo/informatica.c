@@ -1,0 +1,55 @@
+/* styles.css */
+
+/* Selettore di tipo */
+header {
+    background-color: #333;
+    color: #ff0000;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Selettore di classe */
+.heading {
+    font-family: Arial, sans-serif;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #00ff4c;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #2f00ff;
+}
+
+/* Selettore di ID */
+#main-heading {
+    font-size: 2em;
+}
+
+#intro {
+    font-style: italic;
+}
+
+/* Selettore di discendente */
+.content p {
+    margin-bottom: 20px;
+}
+
+/* Selettore di figlio diretto */
+.navigation > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+

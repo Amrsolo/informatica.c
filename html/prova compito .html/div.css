@@ -1,0 +1,10 @@
+body {
+    background: #6600ff;
+    padding: 0 24px;
+    margin: 10px;
+    height: 100vh;
+    color: rgb(0, 255, 94);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
