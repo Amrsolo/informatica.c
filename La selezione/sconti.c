@@ -1,7 +1,7 @@
 #include <stdio.h>
 /*
-Un negoziante per ogni spesa di importo superiore a 50 Ä effettua 
-uno sconto del 5%, del 10% per ogni spesa superiore a 100 Ä.
+Un negoziante per ogni spesa di importo superiore a 50 ÔøΩ effettua 
+uno sconto del 5%, del 10% per ogni spesa superiore a 100 ÔøΩ.
  Scrivere un programma che richieda all'utente l'ammontare della spesa 
  e visualizzi quindi l'importo effettivo da pagare. 
 */
@@ -9,20 +9,24 @@ int main()
 {
 	int a,sconto;
 	
-	printf("inserisci un numero \n");
+	printf("inserisci quanto hai pagato \n");
 	scanf("%d",&a);
 	
 	if(a > 49&&a<100)
 	{
 		sconto= (a*5)/100;
 		a= a-sconto;
-		printf("il prezzo scontato uguale a %d",a); 
+		printf("il prezzo scontato uguale a %d \n",a); 
 	}
 	else if(a > 99)
 	{
 		sconto= (a*10)/100;
 		a= a-sconto;
-		printf("il prezzo scontato uguale a %d",a); 
+		printf("il prezzo scontato uguale a %d \n",a); 
+	}
+	else
+	{
+		printf("non ci sar√† un sconto \n");
 	}
 	
 	
