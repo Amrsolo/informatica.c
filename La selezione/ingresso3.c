@@ -16,33 +16,33 @@ int main()
     {
         if(b == c)
         {
-            printf("Il numero %d è il più grande, e i numeri %d e %d sono uguali.\n", a, b, c);
+            printf("Il numero %d e il piu' grande, e i numeri %d e %d sono uguali.\n", a, b, c);
         }
         else
         {
-            printf("Il numero più grande è %d \n", a);
+            printf("Il numero piu' grande e' %d \n", a);
         }
     }
     else if(b > a && b > c)
     {
         if(a == c)
         {
-            printf("Il numero %d è il più grande, e i numeri %d e %d sono uguali.\n", b, a, c);
+            printf("Il numero %d e il piu' grande, e i numeri %d e %d sono uguali.\n", b, a, c);
         }
         else
         {
-            printf("Il numero più grande è %d \n", b);
+            printf("Il numero piu' grande e' %d \n", b);
         }
     }
     else if(c > a && c > b)
     {
         if(a == b)
         {
-            printf("Il numero %d è il più grande, e i numeri %d e %d sono uguali.\n", c, a, b);
+            printf("Il numero %d e' il pi grande' e i numeri %d e %d sono uguali.\n", c, a, b);
         }
         else
         {
-            printf("Il numero più grande è %d \n", c);
+            printf("Il numero piu' grande e' %d \n", c);
         }
     }
     else if(a == b && a == c) 
@@ -51,27 +51,27 @@ int main()
     }
     else if(a == b && a > c) 
     {
-        printf("I numeri %d e %d sono uguali e sono più grandi di %d\n", a, b, c);
+        printf("I numeri %d e %d sono uguali e sono piu' grandi di %d\n", a, b, c);
     }
     else if(a == b && a < c) 
     {
-        printf("I numeri %d e %d sono uguali e sono più piccoli di %d\n", a, b, c);
+        printf("I numeri %d e %d sono uguali e sono piu' piccoli di %d\n", a, b, c);
     }
     else if(a > b && b == c) 
     {
-        printf("I numeri %d e %d sono uguali e sono più piccoli di %d\n", b, c, a);
+        printf("I numeri %d e %d sono uguali e sono piu' piccoli di %d\n", b, c, a);
     }
     else if(a < b && b == c) 
     {
-        printf("I numeri %d e %d sono uguali e sono più grandi di %d\n", b, c, a);
+        printf("I numeri %d e %d sono uguali e sono piu' grandi di %d\n", b, c, a);
     }
     else if(b > a && a == c) 
     {
-        printf("I numeri %d e %d sono uguali e sono più piccoli di %d\n", a, c, b);
+        printf("I numeri %d e %d sono uguali e sono piu' piccoli di %d\n", a, c, b);
     }
     else if(b < a && a == c) 
     {
-        printf("I numeri %d e %d sono uguali e sono più grandi di %d\n", a, c, b);
+        printf("I numeri %d e %d sono uguali e sono piu' grandi di %d\n", a, c, b);
     }
     
     return 0;    
