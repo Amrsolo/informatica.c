@@ -49,7 +49,6 @@ int main()
             printf("non pasta la tua media\n");
         }
         
-
     }
     if(media<=25)
     {
