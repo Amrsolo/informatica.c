@@ -1,4 +1,8 @@
 #include <stdio.h>
+/* quando l'utente scrive un numero si 
+stampa tutti i numeri da quello che ha scritto l'utente
+ fino a 7
+*/
 
  
  int main()
@@ -7,15 +11,15 @@
  	
 	printf("inserisci il primo numero \n");
  	scanf("%d",&a);
- 	printf("inserisci il secondo numero \n");
- 	scanf("%d",&b);
 
-    while(a=b)
+
+    while(a<7)
     {
+        printf("%d \n",a);
         a++;
-        scanf("%d",&a);
+        
     }
     
-    printf("a=%d",a);
+    
     return 0;
  }
