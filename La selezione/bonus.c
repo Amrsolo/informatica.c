@@ -2,65 +2,42 @@
 int main()
 {   
     //vf=voto finale
-    int vf,crediti;
-    float media;
+    int crediti;
+    float media,vf;
 
     printf("inserisci la tua media \n");
     scanf("%f",&media);
     printf("insersici quanti credeti hai \n");
     scanf("%d",&crediti);
 
-    if(media>=28)
+    if(media>=28&&crediti>24)
     {
-        if(crediti>24)
-        {
+        
             vf=media+2;
-            printf("hai recevuto un bonus di 2 voti ,adesso tua media= %.2f",media);
-        }
-        else
-        {
-            printf("non pastano i tuoi crediti\n");
-        }
-        
+            printf("hai recevuto un bonus di 2 voti ,adesso tua media= %.2f",vf);
+
     }
-    if(media>=25)
+    else if(media>=25&&media<=27)
     {
-        if(media<=27)
+        if(crediti<=24&&crediti>=18)
         {
-            if(crediti<=24)
-            {
-                if(crediti>=18)
-                {
-                    vf=media+1;
-                    printf("hai recevuto un bonus di 1 voti ,adesso tua media= %.2f \n",media);
-                }
-                else
-                {
-                     printf("non pastano i tuoi crediti\n");
-                }
-            }
-            else
-            {
-            printf("non pastano i tuoi crediti\n");
-            }
+            vf=media+1;
+            printf("hai recevuto un bonus di 1 voti ,adesso tua media= %.2f \n",vf);
+               
         }
         else
         {
             printf("non pasta la tua media\n");
         }
-        
     }
-    if(media<=25)
-    {
-        if(crediti<18)
-        {
-           
+    if(media<=25&&crediti<18)
+    {   
             printf("il voto finale rimane invariato\n");
-        }
-        else
-        {
-            printf("non pasta la tua media\n");
-        }
     }
+    else
+    {
+        printf("o che non pasta la tua media o non pastano i tuoi credeti \n");
+    }
+    
     return 0;
 }
