@@ -17,7 +17,7 @@ int main()
             printf("hai recevuto un bonus di 2 voti ,adesso tua media= %.2f",vf);
 
     }
-    else if(media>=25&&media<=27)
+    else if(media>=25 && media<=27)
     {
         if(crediti<=24&&crediti>=18)
         {
@@ -30,7 +30,7 @@ int main()
             printf("non pasta la tua media\n");
         }
     }
-    if(media<=25&&crediti<18)
+    if(media<=25 && crediti<18)
     {   
             printf("il voto finale rimane invariato\n");
     }
