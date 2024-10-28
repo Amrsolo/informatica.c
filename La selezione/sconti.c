@@ -7,22 +7,22 @@ uno sconto del 5%, del 10% per ogni spesa superiore a 100 �.
 */
 int main()
 {
-	int a,sconto;
+	float a,sconto;
 	
 	printf("inserisci quanto hai pagato \n");
-	scanf("%d",&a);
+	scanf("%2f",&a);
 	
 	if(a > 49&&a<100)
 	{
 		sconto= (a*5)/100;
 		a= a-sconto;
-		printf("il prezzo scontato uguale a %d \n",a); 
+		printf("il prezzo scontato uguale a %.2f \n",a); 
 	}
 	else if(a > 99)
 	{
 		sconto= (a*10)/100;
 		a= a-sconto;
-		printf("il prezzo scontato uguale a %d \n",a); 
+		printf("il prezzo scontato uguale a %.2f \n",a); 
 	}
 	else
 	{
