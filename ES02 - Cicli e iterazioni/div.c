@@ -2,16 +2,17 @@
 
 int main()
 {
-    int a;
-    float div;
+    int a,div=0;
+    
 
     printf("inserisci un numero intero \n");
     scanf("%d", &a);
 
     do
     {
-        div = (float)a / 2;
-        printf("a=%.2f \n", div);
+        if(a)
+        div = a / 2;
+        printf("a=%d \n", div);
         a = (int)div; 
     } while (a > 1);
 
