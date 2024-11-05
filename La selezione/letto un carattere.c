@@ -11,12 +11,12 @@ int main()
     
     if(a<=90)
     {   
-        a=("%d",a)+32;
+        a=a+32;
         printf("la lettera era in maioscola e adesso sara' cosi' %c \n",a);
     }
     else if(a>=97)
     {
-        a=("%d",a)-32;
+        a=a-32;
         printf("la lettera era in minoscolo e adesso sara' cosi' %c \n",a);
     }
     else
