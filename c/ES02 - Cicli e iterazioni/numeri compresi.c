@@ -13,14 +13,11 @@ int main()
     printf("inserisci il secondo numero intero \n");
     scanf("%d",&b);
 
-    while(num>a&&num<b)
+    while(num != a && num != b)
     {
         num++;
-        printf("i numeri saranno %d",num);
+        printf("i numeri saranno %d \n",num);
     }
 
-
     return 0;
-
-
 }
