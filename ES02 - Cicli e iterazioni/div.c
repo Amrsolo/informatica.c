@@ -10,7 +10,6 @@ int main()
 
     do
     {
-        if(a)
         div = a / 2;
         printf("a=%d \n", div);
         a = (int)div; 

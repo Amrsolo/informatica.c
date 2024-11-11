@@ -17,9 +17,11 @@ int main()
         scanf("%d", &a);
         somma =somma+a;
         cont++;
-        media=(float)somma/cont;
+        media=(float)somma/(cont-1);
 
     } while (a!=0);
+    printf("hai scritto %d numeri\n",cont-1);
+    printf("la somma = %d \n",somma);
     printf("la media uguale a %.2f \n",media);
 
     return 0;
