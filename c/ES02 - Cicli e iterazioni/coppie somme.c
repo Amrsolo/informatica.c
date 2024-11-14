@@ -15,7 +15,7 @@ int main()
                 
                 while(a!=16)
                 {
-                    printf("i numeri saranno %d \t+\t %d \n",a,b);
+                    printf("per arrivare al 15 fai \t %d \t+\t %d \n",a,b);
                     a++;
                     b--;
                 }
@@ -28,11 +28,11 @@ int main()
 
                 if(a>b)
                 {
-                    while(a!=b)
+                    while(a!=a)
                     {
                         printf("i numeri saranno %d \t+\t %d \n",a,b);
-                        a++;
-                        b--;
+                        a--;
+                        b++;
                     }
                 }
                 else
@@ -40,8 +40,8 @@ int main()
                     while(b!=a)
                     {
                         printf("i numeri saranno %d \t+\t %d \n",a,b);
-                        a--;
-                        b++;
+                        a++;
+                        b--;
                     }
                 }    
         break;
