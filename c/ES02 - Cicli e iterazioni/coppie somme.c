@@ -2,7 +2,7 @@
 //Scrivere un programma che visualizzi tutte le coppie ordinate di numeri naturali la cui somma è 15. 
 int main()
 {
-    int a,b,s,scelta;
+    int a,b,a1,s,scelta;
 
     printf("inserisci 1 per la prima programma che cè gia il numero pronto o 2 per darmi tu il numero \n");
     scanf("%d",&scelta);
@@ -21,29 +21,19 @@ int main()
                 }
         break;
         case 2:
-                printf("insersici il primo numero intero \n");
+                printf("insersici l'intero che doppiamo usarlo per come la somma \n");
                 scanf("%d",&a);
-                printf("insersici il secondo numero intero \n");
-                scanf("%d",&b);
+                a1=a;
+                b=0;
 
-                if(a>b)
-                {
-                    while(a!=a)
+                
+                    while(a!=0)
                     {
-                        printf("i numeri saranno %d \t+\t %d \n",a,b);
+                        printf("i numeri saranno %d + %d = %d \n",a,b,a1);
                         a--;
                         b++;
                     }
-                }
-                else
-                {
-                    while(b!=a)
-                    {
-                        printf("i numeri saranno %d \t+\t %d \n",a,b);
-                        a++;
-                        b--;
-                    }
-                }    
+                
         break;
 
         default:
