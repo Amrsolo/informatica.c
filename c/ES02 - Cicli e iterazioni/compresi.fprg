@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="amr.elsayed"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-18 11:35:05 "/>
+        <attribute name="created" value="YW1yLmVsc2F5ZWQ7UENFMS0wMTI7MjAyNC0xMS0xODsiMTE6MDk6MzIgIjsyNzU2"/>
+        <attribute name="edited" value="YW1yLmVsc2F5ZWQ7UENFMS0wMTI7MjAyNC0xMS0xODsiMTE6MzU6MDUgIjsxOzI4NjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, num" type="Integer" array="False" size=""/>
+            <output expression="&quot;Inserisci il primo numero intero:&quot;" newline="False"/>
+            <input variable="a"/>
+            <output expression="&quot;Inserisci il secondo numero intero:&quot;" newline="False"/>
+            <input variable="b"/>
+            <assign variable="num" expression="a"/>
+            <if expression="a&gt;b">
+                <then>
+                    <assign variable="num" expression="b+1"/>
+                    <assign variable="b" expression="a"/>
+                    <comment text="cos&#236; posso fare solo un ciclo"/>
+                </then>
+                <else>
+                    <assign variable="num" expression="a+1"/>
+                </else>
+            </if>
+            <output expression="&quot;i numeri compresi tra quello che hai insiritto sono&quot;" newline="True"/>
+            <while expression="num&lt;b">
+                <output expression="num" newline="True"/>
+                <assign variable="num" expression="num+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

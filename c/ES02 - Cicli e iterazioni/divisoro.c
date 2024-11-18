@@ -14,8 +14,8 @@ int main() {
     scanf("%d", &a);
 
     if (a <= 0) {
-        printf("Inserisci un numero positivo.\n");
-        return 1;
+        printf("ma non capisci?!! \n deve essere un numero posetivo.\n");
+        return 1; //perchè non puo essere ne uno no di meno 
     }
 
     printf("I divisori del %d sono:\n", a);

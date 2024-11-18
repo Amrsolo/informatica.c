@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="amr.elsayed"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-18 11:44:51 "/>
+        <attribute name="created" value="YW1yLmVsc2F5ZWQ7UENFMS0wMTI7MjAyNC0xMS0xODsiMTE6MzQ6MzcgIjsyNzU5"/>
+        <attribute name="edited" value="YW1yLmVsc2F5ZWQ7UENFMS0wMTI7MjAyNC0xMS0xODsiMTE6NDQ6NTEgIjsxOzI4NjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, num" type="Integer" array="False" size=""/>
+            <assign variable="num" expression="1"/>
+            <output expression="&quot;inserisci un numero intero 'posetivo'&quot;" newline="False"/>
+            <input variable="a"/>
+            <if expression="a&lt;=0">
+                <then>
+                    <output expression="&quot;ma non capisci ?!! &#13;&#10;deve essere un numero posetivo&quot;" newline="True"/>
+                    <input variable="a"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;I divisori saranno&quot;" newline="True"/>
+            <while expression="num&lt;=a">
+                <if expression="a % num == 0">
+                    <then>
+                        <output expression="num" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="num" expression="num+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
