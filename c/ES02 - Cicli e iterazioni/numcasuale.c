@@ -14,17 +14,22 @@ chiedere finché l'utente non indovina il numero. Stampare
 int main()
 {
     srand(time(NULL));
-    int a,i,b,cont=0;
+    int a,i,b;
 
-    printf(" inserisci un numero massimo \n");
+    printf(" inserisci un numero indovinato da 1 a 20 \n");
     scanf("%d",&a);
+
+    if(a>20||a<1)
+    {
+        printf(" inserisci un numero indovinato da 1 a 20 un altra volta che hai spaglato \n");
+        scanf("%d",&a);
+    }
 
     b=rand() % a;
     
-    printf(" indovina un numero \n");
-    for(i=0;i<=a;i++)
-    {   
-        cont++;
-        printf("se il numero indovinato e' %d giusto allora ah questa e' la %d prova \n",b,cont);
+    while(b>a)
+    {
+        
     }
+
 }
