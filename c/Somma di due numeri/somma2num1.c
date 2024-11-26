@@ -18,7 +18,7 @@ int main()
 	
 	somma=num1+num2;
 	
-	printf("la somma dei due numeri e'  %d",somma);
+	printf("la somma dei due numeri e'  %d \n",somma);
 	
 	return 0;
 }
