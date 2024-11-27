@@ -10,7 +10,6 @@ segreto generato casualmente. Il programma continua a
 chiedere finché l'utente non indovina il numero. Stampare
  in quanti tentativi è stato indovinato il numero. Codice di esempio
 */
-
 int main()
 {
     srand(time(NULL));
@@ -38,11 +37,9 @@ int main()
             printf("bravo i due numeri sono ugale il tuo e' %d e quello che era da indovinare = %d \n",num_ut,num_pc);
             
         }  
-        
     }while(num_pc!=num_ut);
 
     printf("bravo i due numeri sono ugale il tuo e' %d e quello che era da indovinare = %d \n",num_ut,num_pc);
 
     return 0;
-
 }
