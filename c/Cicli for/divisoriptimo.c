@@ -1,5 +1,14 @@
 #include<stdio.h>
-
+/*
+Classe: 3H
+Nome: 3mr
+Cognome: Elsayed
+data:27/11/2024
+Scrivere un programma che letto un numero intero da tastiera, stampi tutti 
+i suoi divisori (stampa nel ciclo!) 
+e quindi visualizzi una sola volta (fuori dal ciclo) 
+se è un numero primo o non lo è.
+ Allegare il Flow Chart*/
 int main()
 {
     int a, i, dc = 0;  
@@ -13,7 +22,6 @@ int main()
         return 1;
     }
 
-    
     printf("I divisori di %d sono:\n", a);
     for(i = 1; i <= a; i++) {
         if (a % i == 0) {
@@ -21,8 +29,6 @@ int main()
             dc++;    
         }
     }
-
-    
     if (dc == 2) {
         printf("Il numero %d è primo.\n", a);
     } else {
