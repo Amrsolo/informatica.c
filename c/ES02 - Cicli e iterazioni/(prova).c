@@ -13,7 +13,7 @@
 
 int main()
 {
-    // Inizializzazione del generatore di numeri casuali
+    
     srand(time(NULL));
 
     //Genera un numero casuale tra 0 e RAND_MAX
