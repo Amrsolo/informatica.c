@@ -7,9 +7,8 @@ Nome: 3mr
 Cognome: Elsayed
 Data:27/11/24
 bonus - versione semplificata per l’utente - dire all’utente se
- il numero da indovinare è più alto o più basso di quello inserito.
-  Il numero random generato deve essere da 1 a 1000
-
+il numero da indovinare è più alto o più basso di quello inserito.
+Il numero random generato deve essere da 1 a 1000
 */
 int main()
 {
