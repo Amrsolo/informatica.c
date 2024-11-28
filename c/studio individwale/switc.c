@@ -2,25 +2,23 @@
 
 int main()
 {
-	char A;
+	int A;
 	
-	printf("inserisci lettera\n");
-	scanf("%c",&A);
+	printf("inserisci numero\n");
+	scanf("%d",&A);
 	
 	switch(A)
 	{
-		case 'L':
-		case 'l':
+		case 1:
 			printf(" il giorno è lunedi' \n");
 		break;
 		
-		case 'M':
-		case 'm':
+		case 2:
+
 			printf(" il giorno è martedi' o mercoledi' \n");
 		break;
 		
-		case 'G':
-		case 'g':
+		case 3:
 			printf(" il giorno è giovedi' \n");
 		break;
 		
@@ -34,8 +32,7 @@ int main()
 			printf(" il giorno è sabato \n");
 		break;
 		
-		case 'd':
-		case 'D':
+		case 7:
 			printf(" il giorno è domenica \n");
 		break;
 			
