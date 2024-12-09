@@ -1,7 +1,7 @@
 #include<stdio.h>
 #define N 30
 /*
-ùLeggere una sequenza di interi da tastiera. 
+Leggere una sequenza di interi da tastiera. 
 Fermarsi quando la somma degli interi supera una
  costante N (si ponga N a 30). Visualizzare quindi 
  sul monitor quanti interi sono stati inseriti, 
