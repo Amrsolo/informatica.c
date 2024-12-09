@@ -17,7 +17,7 @@ int main()
             }
         }
         
-        if(num_primo)  // Se il numero è primo
+        if(num_prim)  // Se il numero è primo
         {
             printf("%d \n", num);
         }
