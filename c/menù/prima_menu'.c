@@ -4,6 +4,8 @@
 #define RED         "\033[31m"
 #define RESET       "\033[0m"
 #define BLUE        "\033[34m"
+#define BOLD        "\033[1m"
+#define MAGENTA     "\033[35m"
 
 
 int main()
@@ -55,8 +57,9 @@ int main()
         printf("scegli ("BLUE"3"RESET") per fare il divisore di una sequenza di numeri\t" RED "(scusate il case 3 non funziona per adesso)\n" RESET );
         printf("scegli ("BLUE"4"RESET")per fare la multiplicazione di una sequenza di numeri\n");
         printf("scegli ("BLUE"0"RESET") per uscire\n");
-        printf("tua scelta e' :\t");
+        printf(BOLD"tua scelta e' :\t"RESET);
         scanf("%d",&scelta);
+        printf("\n");
 
             switch (scelta)
             {   
@@ -65,7 +68,7 @@ int main()
                 break;
                 case 1:
                         somma=0;
-                        printf("inserisci la sequenza di numeri che si termina con ("BLUE"0"RESET")\n");
+                        printf(MAGENTA"inserisci la sequenza di numeri che si termina con ("BLUE"0"RESET")\n"RESET);
 
                         do
                         {   
@@ -79,7 +82,7 @@ int main()
                 case 2:
 
                         somma=0,media=0,cont=0;
-                        printf("inserisci una sequenza di numeri che si termina con ("BLUE"0"RESET")\n");
+                        printf(MAGENTA"inserisci una sequenza di numeri che si termina con ("BLUE"0"RESET")\n"RESET);
                         
                         do
                         {
@@ -99,7 +102,7 @@ int main()
                         printf("" RED "scusa il case 3 non funziona per adesso scegli un'altra opzione\n" RESET );
                         /*
                         div=0;
-                        printf("inserisci una sequenza di numeri che si termina con ("BLUE"0"RESET") \n");
+                        printf(MAGENTA"inserisci una sequenza di numeri che si termina con ("BLUE"0"RESET") \n"RESET);
 
                         do
                         {
@@ -114,9 +117,9 @@ int main()
 
                         
                         mult=1;
-                        printf("inserisci una sequenza di numeri che si termina con ("BLUE"1"RESET")\n");
-                        printf("cmq l'uno non si serve perche' qualsiasi numero per il 1 = allo stesso numero ma il 0 no\n");
-                        printf("digita ("BLUE"1"RESET") per uscire (uno)\n");
+                        printf(MAGENTA"inserisci una sequenza di numeri che si termina con ("BLUE"1"RESET MAGENTA")\n"RESET);
+                        printf(MAGENTA"cmq l'uno non si serve perche' qualsiasi numero per il ("BLUE"1"RESET MAGENTA") = allo stesso numero ma il ("BLUE"0"RESET MAGENTA") no\n"RESET);
+                        printf(MAGENTA"digita ("BLUE"1"RESET MAGENTA") per uscire (uno)\n"RESET);
 
                         do
                         {   
@@ -127,7 +130,7 @@ int main()
                         printf("il multiplicazione = " BLUE "%d\n"RESET,mult);
                 break;
                 default:
-                    printf("\n\terrore (non c'e' una scelta cosi')\n\t");
+                    printf(MAGENTA"\n\terrore (non c'e' una scelta cosi')\n\t"RESET);
             }
 
     }while(scelta|=0);

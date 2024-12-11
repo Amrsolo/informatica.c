@@ -34,7 +34,7 @@ int main() {
     // Test dei colori del testo
     printf(UNDERLINE "Questo è un testo rosso!\n" RESET);
     printf(BOLD "Questo è un testo verde!\n" RESET);
-    printf(MAGENTA "Questo è un testo blu!\n" RESET);
+    printf(CYAN "Questo è un testo blu!\n" RESET);
     /*
     // Test dello sfondo colorato
     printf(BACK_YELLOW BLACK "Testo con sfondo giallo e testo nero\n" RESET);
