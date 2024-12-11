@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#define RED         "\033[31m"
+#define RESET       "\033[0m"
+#define BLUE        "\033[34m"
+
 
 int main()
 {
-    int scelta,somma=0,cont=0,a;
-    float media=0;
+    int scelta,somma=0,cont=0,mult=1,a;
+    float media=0,div=1;
     
     /*
     printf("scegli 1 per fare la somma di una sequenza di numeri\n");
@@ -46,11 +50,12 @@ int main()
     do
     {
         
-        printf("\nscegli (1) per fare la somma di una sequenza di numeri\n");
-        printf("scegli (2) per fare la media di una sequenza di numeri\n");
-        printf("scegli (3) per fare il divisore di una sequenza di numeri\n");
-        printf("scegli (4) per fare la multiplicazione di una sequenza di numeri\n");
-        printf("scegli (0) per uscire\n");
+        printf("\nscegli ("BLUE"1"RESET") per fare la somma di una sequenza di numeri\n");
+        printf("scegli ("BLUE"2"RESET") per fare la media di una sequenza di numeri\n");
+        printf("scegli ("BLUE"3"RESET") per fare il divisore di una sequenza di numeri\t" RED "(scusate il case 3 non funziona per adesso)\n" RESET );
+        printf("scegli ("BLUE"4"RESET")per fare la multiplicazione di una sequenza di numeri\n");
+        printf("scegli ("BLUE"0"RESET") per uscire\n");
+        printf("tua scelta e' :\t");
         scanf("%d",&scelta);
 
             switch (scelta)
@@ -59,21 +64,22 @@ int main()
                     printf("Uscita dal programma.\n");
                 break;
                 case 1:
-                    
-                        printf("inserisci la sequenza di numeri che si termina con 0\n");
+                        somma=0;
+                        printf("inserisci la sequenza di numeri che si termina con ("BLUE"0"RESET")\n");
 
-                        while(a!=0)
+                        do
                         {   
                             scanf("%d",&a);
                             somma+=a;
-                        }  
-                        printf("la somma = %d\n",somma);
+                        }while(a!=0);  
+                        printf("la somma = " BLUE "%d\n"RESET,somma);
                      
                 break;
                 
                 case 2:
-                    
-                        printf("inserisci una sequenza di numeri che si termina con 0\n");
+
+                        somma=0,media=0,cont=0;
+                        printf("inserisci una sequenza di numeri che si termina con ("BLUE"0"RESET")\n");
                         
                         do
                         {
@@ -84,9 +90,41 @@ int main()
                         
                         media=(float)somma/(cont-1);
 
-                        printf("la media = %.2f\n",media);
+                        printf("la media = " BLUE "%.2f\n"RESET,media);
                     
                         
+                break;
+                case 3:
+
+                        printf("" RED "scusa il case 3 non funziona per adesso scegli un'altra opzione\n" RESET );
+                        /*
+                        div=0;
+                        printf("inserisci una sequenza di numeri che si termina con ("BLUE"0"RESET") \n");
+
+                        do
+                        {
+                            scanf("%d",&a);
+                            div/=a;
+                        }while(a|=0);
+
+                        printf("il divesore =" BLUE "%.3f\n"RESET,div);
+                        */
+                break;    
+                case 4:
+
+                        
+                        mult=1;
+                        printf("inserisci una sequenza di numeri che si termina con ("BLUE"1"RESET")\n");
+                        printf("cmq l'uno non si serve perche' qualsiasi numero per il 1 = allo stesso numero ma il 0 no\n");
+                        printf("digita ("BLUE"1"RESET") per uscire (uno)\n");
+
+                        do
+                        {   
+                            scanf("%d",&a);
+                            mult*=a;
+                        }while(a!=1);
+
+                        printf("il multiplicazione = " BLUE "%d\n"RESET,mult);
                 break;
                 default:
                     printf("\n\terrore (non c'e' una scelta cosi')\n\t");
