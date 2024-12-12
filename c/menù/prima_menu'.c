@@ -61,6 +61,8 @@ int main()
         printf("scegli ("BLUE"7"RESET")per stampare titti i numeri dispari sotto a quello che lo inserisci \n");
         printf("scegli ("BLUE"8"RESET")per stampare titti i numeri pari sopra a quello che lo inserisci "BLUE"(ma devi inserire un limite massimo)"RESET" \n");
         printf("scegli ("BLUE"9"RESET")per stampare titti i numeri dispari sopra a quello che lo inserisci "BLUE"(ma devi inserire un limite massimo)"RESET" \n");
+        printf("scegli ("BLUE"10"RESET")per fare il multiplicazione di numeri e con il numero che scegli te "BLUE"(tipo ti fa i numeri compresi tra il 5 e 6 multipli con il 4 :4*5 + 4*6 = 356 )"RESET" \n");
+        printf("scegli ("BLUE"-1"RESET") per per l'epiegazione di ongi opzione\n");
         printf("scegli ("BLUE"0"RESET") per uscire\n");
         printf(BOLD"tua scelta e' :\t"BLUE);
         scanf("%d",&scelta);
@@ -70,6 +72,31 @@ int main()
             {   
                 case 0:
                     printf("Uscita dal programma.\n");
+                break;
+                case -1:
+                    printf("\nSpiegazioni delle opzioni con esempi pratici:\n\n");
+                    printf(BLUE BOLD"1: Calcola la somma di una sequenza di numeri.\n"RESET);
+                        printf(RED"   Esempio: Inserisci 5, 10, 0. Risultato: 15 (5 + 10).\n");
+                    printf(BLUE BOLD"2: Calcola la media di una sequenza di numeri.\n"RESET);
+                        printf(RED"   Esempio: Inserisci 5, 10, 15, 0. Risultato: 10 (media di 5, 10 e 15).\n");
+                    printf(BLUE BOLD"3: (Non funzionante) Doveva calcolare il divisore cumulativo.\n"RESET);
+                    printf(BLUE BOLD"4: Calcola la moltiplicazione cumulativa di una sequenza di numeri.\n"RESET);
+                        printf(RED"   Esempio: Inserisci 2, 3, 4, 1. Risultato: 24 (2 × 3 × 4).\n");
+                    printf(BLUE BOLD"5: Trova e stampa i numeri compresi tra due valori.\n"RESET);
+                        printf(RED"   Esempio: Inserisci 5 e 10. Risultato: 6, 7, 8, 9.\n");
+                    printf(BLUE BOLD"6: Stampa tutti i numeri pari sotto un valore.\n"RESET);
+                        printf(RED"   Esempio: Inserisci 8. Risultato: 6, 4, 2, 0.\n");
+                    printf(BLUE BOLD"7: Stampa tutti i numeri dispari sotto un valore.\n"RESET);
+                        printf(RED"   Esempio: Inserisci 9. Risultato: 7, 5, 3, 1.\n");
+                    printf(BLUE BOLD"8: Stampa tutti i numeri pari sopra un valore fino a un limite.\n"RESET);
+                        printf(RED"   Esempio: Inserisci 5 come valore e 12 come limite. Risultato: 6, 8, 10.\n");
+                    printf(BLUE BOLD"9: Stampa tutti i numeri dispari sopra un valore fino a un limite.\n"RESET);
+                        printf(RED"   Esempio: Inserisci 5 come valore e 12 come limite. Risultato: 7, 9, 11.\n");
+                    printf(BLUE BOLD"10: Somma i prodotti di un numero con una sequenza di valori compresi tra due estremi.\n"RESET);
+                        printf(RED"   Esempio: Inserisci 2 come inizio, 4 come fine, 3 come moltiplicatore.\n");
+                        printf(RED"   Risultato: (3×2) + (3×3) + (3×4) = 27.\n");
+                    printf(BLUE BOLD"-1: Mostra questa spiegazione con esempi.\n"RESET);
+                    printf(BLUE BOLD"0: Esce dal programma.\n\n"RESET);
                 break;
                 case 1:
                         somma=0;
@@ -225,6 +252,39 @@ int main()
                                 printf(BLUE"%d\n"RESET,a );
                             }
                         }while(a<b);
+                break;
+                case 10:
+
+                        printf(MAGENTA"inserici un numero dove si inzia il multiplicazione\n"RESET);
+                        scanf("%d",&a);
+                        printf(MAGENTA"inserici un numero dove si finisce il multiplicazione\n"RESET);
+                        scanf("%d",&b);
+                        printf(MAGENTA"inserici un numero che si una per fare il multiplicazione\n"RESET);
+                        scanf("%d",&a1);
+                        mult=a1;
+
+                        if(a>b)
+                        {
+                            for(i=b;i<=a;i++)
+                            {
+                                mult*=i;
+                                somma+=mult;
+                            }
+                        }
+                        else if(a<b)
+                        {
+                            for(i=a;i<=b;i++)
+                            {
+                                mult*=i;
+                                somma+=mult;
+                            }
+                        }
+                        else
+                        {
+                            (a+b)*mult;
+                        }
+
+                        printf(BLUE"i numeri multiplicati = %d"RESET,somma);
                 break;
                 default:
                     printf(MAGENTA"\n\terrore (non c'e' una scelta cosi')\n\t"RESET);
