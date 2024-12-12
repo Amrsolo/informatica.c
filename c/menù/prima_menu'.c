@@ -10,7 +10,7 @@
 
 int main()
 {
-    int scelta,somma=0,cont=0,mult=1,a;
+    int scelta,somma=0,cont=0,mult=1,a,i,b1,a1;
     float media=0,div=1;
     
     /*
@@ -56,10 +56,11 @@ int main()
         printf("scegli ("BLUE"2"RESET") per fare la media di una sequenza di numeri\n");
         printf("scegli ("BLUE"3"RESET") per fare il divisore di una sequenza di numeri\t" RED "(scusate il case 3 non funziona per adesso)\n" RESET );
         printf("scegli ("BLUE"4"RESET")per fare la multiplicazione di una sequenza di numeri\n");
+        printf("scegli ("BLUE"5"RESET")per trovare i numeri compresi tra due numeri\n");
         printf("scegli ("BLUE"0"RESET") per uscire\n");
-        printf(BOLD"tua scelta e' :\t"RESET);
+        printf(BOLD"tua scelta e' :\t"BLUE);
         scanf("%d",&scelta);
-        printf("\n");
+        printf("\n"RESET);
 
             switch (scelta)
             {   
@@ -128,6 +129,33 @@ int main()
                         }while(a!=1);
 
                         printf("il multiplicazione = " BLUE "%d\n"RESET,mult);
+                break;
+                case 5:
+                        printf("inserisci un numero \n");
+                        scanf("%d",&a1);
+                        printf("inserisci un'altro numero \n");
+                        scanf("%d",&b1);
+
+                        if(a1<b1)
+                        {
+                            printf(MAGENTA"\ni numeri tra il %d e %d =\n\n"RESET,a1,b1);
+                                for(i=a1+1;i<b1;i++)
+                                {
+                                    printf(BLUE"%d\n"RESET,i);
+                                }
+                        }
+                        else if(a1>b1)
+                        {
+                            printf(MAGENTA"\ni numeri tra il %d e %d =\n\n"RESET,b1,a1);
+                                for(i=b1+1;i<a1;i++)
+                                {
+                                    printf(BLUE"%d\n"RESET,i);
+                                }
+                        }
+                        else
+                        {
+                            printf(MAGENTA"i due numeri che hai inserito sono uguali che sono %d e %d\n"RESET,a1,b1);
+                        }
                 break;
                 default:
                     printf(MAGENTA"\n\terrore (non c'e' una scelta cosi')\n\t"RESET);
