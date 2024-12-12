@@ -4,7 +4,7 @@ visualizza tutti i numeri pari inferiori a tale numero.
 */
 int main()
 {
-    int a,num_pari;
+    int a;
     printf("inserisci un numero \n");
     scanf("%d",&a);
     printf("i numeri pari che sono sotto il %d = \n",a);

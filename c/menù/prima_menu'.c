@@ -10,7 +10,7 @@
 
 int main()
 {
-    int scelta,somma=0,cont=0,mult=1,a,i,b1,a1;
+    int scelta,somma=0,cont=0,mult=1,a,b,i,b1,a1;
     float media=0,div=1;
     
     /*
@@ -57,6 +57,10 @@ int main()
         printf("scegli ("BLUE"3"RESET") per fare il divisore di una sequenza di numeri\t" RED "(scusate il case 3 non funziona per adesso)\n" RESET );
         printf("scegli ("BLUE"4"RESET")per fare la multiplicazione di una sequenza di numeri\n");
         printf("scegli ("BLUE"5"RESET")per trovare i numeri compresi tra due numeri\n");
+        printf("scegli ("BLUE"6"RESET")per stampare titti i numeri pari sotto a quello che lo inserisci \n");
+        printf("scegli ("BLUE"7"RESET")per stampare titti i numeri dispari sotto a quello che lo inserisci \n");
+        printf("scegli ("BLUE"8"RESET")per stampare titti i numeri pari sopra a quello che lo inserisci "BLUE"(ma devi inserire un limite massimo)"RESET" \n");
+        printf("scegli ("BLUE"9"RESET")per stampare titti i numeri dispari sopra a quello che lo inserisci "BLUE"(ma devi inserire un limite massimo)"RESET" \n");
         printf("scegli ("BLUE"0"RESET") per uscire\n");
         printf(BOLD"tua scelta e' :\t"BLUE);
         scanf("%d",&scelta);
@@ -156,6 +160,71 @@ int main()
                         {
                             printf(MAGENTA"i due numeri che hai inserito sono uguali che sono %d e %d\n"RESET,a1,b1);
                         }
+                break;
+                case 6:
+
+                        printf(MAGENTA"inserisci un numero \n"RESET);
+                        scanf("%d",&a);
+                        printf(MAGENTA"i numeri pari che sono sotto il %d = \n"RESET,a);
+                        
+                        do
+                        {
+                            a--;
+                            if(a%2==0)
+                            {
+                                printf(BLUE"%d"RESET,a );
+                            }
+                        }while(a!=0);
+                break;
+                case 7:
+
+                        printf(MAGENTA"inserisci un numero \n"RESET );
+                        scanf("%d",&a );
+                        printf(MAGENTA"i numeri dispari che sono sotto il %d = \n"RESET,a );
+                        
+                        do
+                        {
+                            a--;
+                            if(a%2==1)
+                            {
+                                printf(BLUE"%d"RESET,a );
+                            }
+                        }while(a!=0);
+                break;
+                case 8:
+
+                        printf(MAGENTA"inserisci un numero \n"RESET );
+                        scanf("%d",&a );
+                        printf(MAGENTA"inserisci un limite massimo \n"RESET );
+                        scanf("%d",&b );
+                        
+                        printf(MAGENTA"i numeri dispari che sono sopra il %d = \n"RESET,a );
+                        
+                        do
+                        {
+                            a++;
+                            if(a%2==1)
+                            {
+                                printf(BLUE"%d"RESET,a );
+                            }
+                        }while(a<b);
+                break;
+                case 9:
+
+                        printf(MAGENTA"inserisci un numero \n"RESET);
+                        scanf("%d",&a );
+                        printf(MAGENTA"inserisci un limite massimo \n"RESET);
+                        scanf("%d",&b );
+                        printf(MAGENTA"i numeri pari che sono sopra il %d = \n"RESET,a);
+                        
+                        do
+                        {
+                            a++;
+                            if(a%2==1)
+                            {
+                                printf(BLUE"%d"RESET,a );
+                            }
+                        }while(a<b);
                 break;
                 default:
                     printf(MAGENTA"\n\terrore (non c'e' una scelta cosi')\n\t"RESET);
