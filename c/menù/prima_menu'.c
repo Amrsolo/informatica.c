@@ -10,7 +10,8 @@
 
 int main()
 {
-    int scelta,somma=0,cont=0,mult=1,a,b,i,b1,a1;
+    int scelta,scelta2,somma=0,cont=0,mult=1,a,b,i,b1,a1;
+    char a2;
     float media=0,div=1;
     
     /*
@@ -61,7 +62,8 @@ int main()
         printf("scegli ("BLUE"7"RESET")per stampare titti i numeri dispari sotto a quello che lo inserisci \n");
         printf("scegli ("BLUE"8"RESET")per stampare titti i numeri pari sopra a quello che lo inserisci "BLUE"(ma devi inserire un limite massimo)"RESET" \n");
         printf("scegli ("BLUE"9"RESET")per stampare titti i numeri dispari sopra a quello che lo inserisci "BLUE"(ma devi inserire un limite massimo)"RESET" \n");
-        printf("scegli ("BLUE"10"RESET")per fare il multiplicazione di numeri e con il numero che scegli te "BLUE"(tipo ti fa i numeri compresi tra il 5 e 6 multipli con il 4 :4*5 + 4*6 = 356 )"RESET" \n");
+        printf("scegli ("BLUE"10"RESET")per fare il multiplicazione di numeri e con il numero che scegli te \n");
+        printf("scegli ("BLUE"11"RESET") per fare alcune cose con le lettere (c'e' l'espiegazione nel ("BLUE"-1"RESET"))\n");
         printf("scegli ("BLUE"-1"RESET") per per l'epiegazione di ongi opzione\n");
         printf("scegli ("BLUE"0"RESET") per uscire\n");
         printf(BOLD"tua scelta e' :\t"BLUE);
@@ -95,6 +97,13 @@ int main()
                     printf(BLUE BOLD"10: Somma i prodotti di un numero con una sequenza di valori compresi tra due estremi.\n"RESET);
                         printf(RED"   Esempio: Inserisci 2 come inizio, 4 come fine, 3 come moltiplicatore.\n");
                         printf(RED"   Risultato: (3×2) + (3×3) + (3×4) = 27.\n");
+                        printf(BLUE BOLD"11: Esegui operazioni con le lettere.\n"RESET);
+                    printf(RED"   Esempio:\n");
+                        printf("   - Opzione ("RESET"1"RED"): Inserisci una lettera. Se è maiuscola, verrà convertita in minuscola e viceversa.\n");
+                            printf("     Esempio: Inserisci 'A'. Risultato: 'a'.\n");
+                            printf("     Oppure: Inserisci 'a'. Risultato: 'A'.\n");
+                        printf("   - Opzione ("RESET"2"RED"): Inserisci una lettera. Verranno mostrati i codici decimali e esadecimali corrispondenti.\n");
+                            printf("     Esempio: Inserisci 'A'. Risultato: Decimale: 65, Esadecimale: 41.\n");
                     printf(BLUE BOLD"-1: Mostra questa spiegazione con esempi.\n"RESET);
                     printf(BLUE BOLD"0: Esce dal programma.\n\n"RESET);
                 break;
@@ -285,6 +294,77 @@ int main()
                         }
 
                         printf(BLUE"i numeri multiplicati = %d"RESET,somma);
+                break;
+                case 11:
+                        
+                        printf("inserisci un numero per una opzione\n");
+                        printf("\nscegli ("BLUE"1"RESET") per trovare la lettera minuscola o maiuscula da quella inseritta\n");
+                        printf("\nscegli ("BLUE"2"RESET") per trovare il numero decimale e esadicimale di una lettera\n");
+                        scanf("%d",&scelta2);
+                        switch(scelta2)
+                        {   /*
+                            case 1:
+
+                                printf(MAGENTA"inserici una lettera\n"RESET);
+                                scanf("%c",&a2);
+
+
+                                a2=("%d",a2);
+   
+                                if(a2<=90&&a2>=65)
+                                {  
+                                    a2=a2+32;
+                                    printf("la lettera era in maioscola e adesso sara' cosi' %c \n",a2);
+                                }
+                                else if(a2>=97&&a2<=122)
+                                {
+                                    a=a-32;
+                                    printf("la lettera era in maioscolo e adesso sara' cosi' %c \n",a2);
+                                }
+                                else
+                                {
+                                    printf("non è una lettera \n");
+                                }
+                            break;
+                            case 2:
+                                printf(MAGENTA"inserisci una lettera \n"RESET);
+                                scanf("%c",&a2); 
+
+                                printf(BLUE"il numero decimale del %c sara' %d \n",a2,a2);
+                                printf("il numero esadecimale del %c sara' %x \n"RESET,a2,a2);
+                            break;
+                            */
+                            case 1:
+
+                                printf(MAGENTA"Inserisci una lettera:\n"RESET);
+                                scanf(" %c", &a2); // Nota lo spazio prima di %c per consumare i caratteri di nuova linea
+
+                                if (a2 >= 'A' && a2 <= 'Z') // Controlla se è una lettera maiuscola
+                                {  
+                                    a2 = a2 + 32; // Converti in minuscola
+                                    printf(MAGENTA"La lettera era maiuscola e adesso sarà:"BLUE" %c\n", a2);
+                                }
+                                else if (a2 >= 'a' && a2 <= 'z') // Controlla se è una lettera minuscola
+                                {
+                                    a2 = a2 - 32; // Converti in maiuscola
+                                    printf(MAGENTA"La lettera era minuscola e adesso sarà: "BLUE"%c\n", a2);
+                                }
+                                else
+                                {
+                                    printf(MAGENTA"Non è una lettera.\n"RESET);
+                                }
+                        break;
+
+                        case 2:
+
+                            printf(MAGENTA"Inserisci una lettera:\n"RESET);
+                            scanf(" %c", &a2); // Nota lo spazio prima di %c per gestire correttamente il buffer
+
+                            printf(BLUE"Il numero decimale di '%c' è: %d\n", a2, a2);
+                            printf("Il numero esadecimale di '%c' è: %x\n"RESET, a2, a2);
+                            break;
+
+                        }
                 break;
                 default:
                     printf(MAGENTA"\n\terrore (non c'e' una scelta cosi')\n\t"RESET);
