@@ -165,14 +165,14 @@ int main()
 
                         printf(MAGENTA"inserisci un numero \n"RESET);
                         scanf("%d",&a);
-                        printf(MAGENTA"i numeri pari che sono sotto il %d = \n"RESET,a);
+                        printf(MAGENTA"i numeri pari che sono sotto il "BLUE" %d "RESET" = \n"RESET,a);
                         
                         do
                         {
                             a--;
                             if(a%2==0)
                             {
-                                printf(BLUE"%d"RESET,a );
+                                printf(BLUE"%d\n"RESET,a );
                             }
                         }while(a!=0);
                 break;
@@ -180,14 +180,14 @@ int main()
 
                         printf(MAGENTA"inserisci un numero \n"RESET );
                         scanf("%d",&a );
-                        printf(MAGENTA"i numeri dispari che sono sotto il %d = \n"RESET,a );
+                        printf(MAGENTA"i numeri dispari che sono sotto il "BLUE" %d "RESET" = \n"RESET,a );
                         
                         do
                         {
                             a--;
                             if(a%2==1)
                             {
-                                printf(BLUE"%d"RESET,a );
+                                printf(BLUE"%d\n"RESET,a );
                             }
                         }while(a!=0);
                 break;
@@ -198,14 +198,14 @@ int main()
                         printf(MAGENTA"inserisci un limite massimo \n"RESET );
                         scanf("%d",&b );
                         
-                        printf(MAGENTA"i numeri dispari che sono sopra il %d = \n"RESET,a );
+                        printf(MAGENTA"i numeri dispari che sono sopra il "BLUE" %d "RESET" = \n"RESET,a );
                         
                         do
                         {
                             a++;
                             if(a%2==1)
                             {
-                                printf(BLUE"%d"RESET,a );
+                                printf(BLUE"%d\n"RESET,a );
                             }
                         }while(a<b);
                 break;
@@ -215,14 +215,14 @@ int main()
                         scanf("%d",&a );
                         printf(MAGENTA"inserisci un limite massimo \n"RESET);
                         scanf("%d",&b );
-                        printf(MAGENTA"i numeri pari che sono sopra il %d = \n"RESET,a);
+                        printf(MAGENTA"i numeri pari che sono sopra il"BLUE" %d "RESET"= \n"RESET,a);
                         
                         do
                         {
                             a++;
-                            if(a%2==1)
+                            if(a%2==0)
                             {
-                                printf(BLUE"%d"RESET,a );
+                                printf(BLUE"%d\n"RESET,a );
                             }
                         }while(a<b);
                 break;
