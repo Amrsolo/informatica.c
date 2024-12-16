@@ -64,6 +64,7 @@ int main()
         printf("scegli ("BLUE"9"RESET")per stampare titti i numeri dispari sopra a quello che lo inserisci "BLUE"(ma devi inserire un limite massimo)"RESET" \n");
         printf("scegli ("BLUE"10"RESET")per fare il multiplicazione di numeri e con il numero che scegli te \n");
         printf("scegli ("BLUE"11"RESET") per fare alcune cose con le lettere (c'e' l'espiegazione nel ("BLUE"-1"RESET"))\n");
+        printf("scegli ("BLUE"12"RESET")per trovare il fattore di un numero \n");
         printf("scegli ("BLUE"-1"RESET") per per l'epiegazione di ongi opzione\n");
         printf("scegli ("BLUE"0"RESET") per uscire\n");
         printf(BOLD"tua scelta e' :\t"BLUE);
@@ -365,6 +366,19 @@ int main()
                             break;
 
                         }
+                break;
+                case 12:
+
+                    printf(MAGENTA"Inserisci un numero:\n"RESET);
+                    scanf(" %d", &a);
+                    cont=a;
+
+                    while(cont!=0)
+                    {
+                        mult*=cont;
+                        cont--;
+                    }
+                    printf(BLUE"Il numero fattore del %d e' : %d\n",a,mult);
                 break;
                 default:
                     printf(MAGENTA"\n\terrore (non c'e' una scelta cosi')\n\t"RESET);
