@@ -1,26 +1,34 @@
 #include <stdio.h>
 
-int prova(int x, int y)
+void  prova(int x, int y)
 {
     int a = 0;
     a = x + y;
-
-    return a;
+    printf("La somma è: %d\n", a);
 }
-int multi(int x,int y)
+void  multi(int x,int y)
 {
     int multi=1;
     multi = x * y;
-
-    return multi;
+    printf("il multiplicazione è: %d\n",multi);
 }
-int diviso(int x,int y)
+void diviso(int x,int y)
 {
     float diviso;
     diviso=(float)x/y;
-
-    return diviso;
+    printf("il diviso è: %.2f\n", diviso);
 }
+void numeri_pari(int x)
+{   
+    printf("i numeri pari che ci sono dal 1 al %d sono\n",x);
+    for(int i=1;i<=x;i++)
+    if(i%2==0)
+    {
+        printf("%d\n",i);
+    }
+   
+}
+
 
 int main()
 {
@@ -30,13 +38,10 @@ int main()
     printf("Inserisci due numeri:\n");
     scanf("%d %d", &x1, &y1);
 
-    a1 = prova(x1, y1);
-    printf("La somma è: %d\n", a1);
-    a1 = prova(x1+25, y1+58);
-    printf("La somma è: %d\n", a1);
-    a1 = multi(x1, y1);
-    printf("il multiplicazione è: %d\n", a1);
-    a2 = diviso(x1, y1);
-    printf("il diviso è: %.2f\n", a2);
+    prova(x1, y1);
+    prova(x1+25, y1+58);
+    multi(x1, y1);
+    diviso(x1, y1);
+    numeri_pari(x1);
     return 0;
 }

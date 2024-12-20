@@ -372,7 +372,8 @@ int main()
                     printf(MAGENTA"Inserisci un numero:\n"RESET);
                     scanf(" %d", &a);
                     cont=a;
-
+                    mult=1;
+                    
                     while(cont!=0)
                     {
                         mult*=cont;
