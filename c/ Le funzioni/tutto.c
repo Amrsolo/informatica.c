@@ -5,7 +5,7 @@ void area_rettangolo(int x,int y)
 {
     int a=0;
     a=x*y;
-    printf("l'area = %d \n",a);
+    printf("\nl'area = %d \n",a);
 }
 void mcd(int x,int y)
 {
@@ -19,13 +19,13 @@ void mcd(int x,int y)
             break;  // Uscire dal ciclo quando troviamo il massimo divisore comune
         }
     }
-    printf("Il MCD dei tre numeri è: %d\n", mcd);
+    printf("\nIl MCD dei due numeri è: %d\n", mcd);
 }
 void somma_divisori(int x)
 {
     int somma=0,i;
     
-    printf("i divisori = \n");
+    printf("\ni divisori = \n");
     for(i=1;i<=x;i++)
     {   
         if(x % i == 0)
@@ -41,45 +41,44 @@ void pari_dispari(int x)
 {  
     if(x%2==0)
     {
-        printf("0\n");
+        printf("\n0\n");
     }
     else
     {
-        printf("1\n");
+        printf("\n1\n");
     }
 }
-/*
-int sommaCifre(int numero) {
-    numero = abs(numero); // Assicurarsi che il numero sia positivo
-    int somma = 0;
-
-    while (numero > 0) {
-        somma += numero % 10; // Aggiungi l'ultima cifra
-        numero /= 10;         // Rimuovi l'ultima cifra
-    }
-
-    return somma;
-}
-*/
 void cifra_1(int x)
 {
     int num=0;
     num+=x%10;
-    printf("il numero dell'ultima cifra = %d\n",num);
+    printf("\nil numero dell'ultima cifra = %d\n",num);
 }
-void somma_cifre(int x,int num1)
+void somma_cifre(int x)
 {
-    /*Scrivi una funzione che trovi la somma
-     delle cifre di un dato numero intero.
-      Ad esempio, la somma delle cifre di 123 è 6.
+    /*
+    Scrivi una funzione che trovi la somma
+    delle cifre di un dato numero intero.
+    Ad esempio, la somma delle cifre di 123 è 6.
     */
-    int i,somma=0;
-    for(i=1;i<=num1;i++)
+    int somma=0; 
+    while(x!=0)
     {
-        somma+=x%10;
-        printf("la somma = %d\n",somma);
+        somma+=x&10;
+        x/10;
     }
-    
+    printf("\nla somma = %d\n",somma);
+}
+void cont_cifre(int x)
+{
+    int cont=0,i;
+    while(x!=0)
+    {
+        i+=x&10;
+        x/10;
+        cont++;
+    }
+    printf("\nhai messo %d numeri",cont);
 }
 int main()
 {
@@ -91,15 +90,15 @@ int main()
     scanf("%d",&b);
     printf("inserici un numero lungo almeno 3 cifre per trovare l'ultima cifra \n");
     scanf("%d",&c);
-    printf("inserici quante cifre hai messe adesso \n");
-    scanf("%d",&d);
+    
 
     area_rettangolo(a,b);
     mcd(a,b);
     somma_divisori(a);
     pari_dispari(a);
     cifra_1(c);
-    somma_cifre(c,d);
+    somma_cifre(c);
+    cont_cifre(c);
     return 0;
 }
 
