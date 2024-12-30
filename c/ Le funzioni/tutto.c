@@ -64,8 +64,8 @@ void somma_cifre(int x)
     int somma=0; 
     while(x!=0)
     {
-        somma+=x&10;
-        x/10;
+        somma+=x%10;
+        x/=10;
     }
     printf("\nla somma = %d\n",somma);
 }
@@ -74,11 +74,11 @@ void cont_cifre(int x)
     int cont=0,i;
     while(x!=0)
     {
-        i+=x&10;
-        x/10;
+        i+=x%10;
+        x/=10;
         cont++;
     }
-    printf("\nhai messo %d numeri",cont);
+    printf("\nhai messo %d cifre\n",cont);
 }
 int main()
 {
