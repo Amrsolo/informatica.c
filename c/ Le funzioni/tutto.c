@@ -80,6 +80,17 @@ void cont_cifre(int x)
     }
     printf("\nhai messo %d cifre\n",cont);
 }
+void inverti_cifre(int x) 
+{
+    int invert = 0;
+
+    while (numero != 0) {
+        invert = invert * 10 + numero % 10;
+        numero /= 10; 
+    }
+
+    printf("Il numero invertito è: %d\n", invertito);
+}
 int main()
 {
     int a,b,c,d;
@@ -95,10 +106,11 @@ int main()
     area_rettangolo(a,b);
     mcd(a,b);
     somma_divisori(a);
-    pari_dispari(a);
     cifra_1(c);
     somma_cifre(c);
     cont_cifre(c);
+    pari_dispari(a);
+    inverti_cifre(c);
     return 0;
 }
 
