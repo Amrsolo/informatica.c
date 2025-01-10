@@ -11,7 +11,7 @@ int main()
     scanf("%d%d",&a,&b);
     r= media(a,b);
     c=mcd(a,b);
-    printf("la media = %.2f\n,il mcd = %d\n",r,c);
+    printf("la media = %.2f\nil mcd = %d\n",r,c);
 
     return 0;
 }
