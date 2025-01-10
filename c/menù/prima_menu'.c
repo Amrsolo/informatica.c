@@ -58,13 +58,14 @@ int main()
         printf("scegli ("BLUE"3"RESET") per fare il divisore di una sequenza di numeri\t" RED "(scusate il case 3 non funziona per adesso)\n" RESET );
         printf("scegli ("BLUE"4"RESET")per fare la multiplicazione di una sequenza di numeri\n");
         printf("scegli ("BLUE"5"RESET")per trovare i numeri compresi tra due numeri\n");
-        printf("scegli ("BLUE"6"RESET")per stampare titti i numeri pari sotto a quello che lo inserisci \n");
-        printf("scegli ("BLUE"7"RESET")per stampare titti i numeri dispari sotto a quello che lo inserisci \n");
-        printf("scegli ("BLUE"8"RESET")per stampare titti i numeri pari sopra a quello che lo inserisci "BLUE"(ma devi inserire un limite massimo)"RESET" \n");
-        printf("scegli ("BLUE"9"RESET")per stampare titti i numeri dispari sopra a quello che lo inserisci "BLUE"(ma devi inserire un limite massimo)"RESET" \n");
+        printf("scegli ("BLUE"6"RESET")per stampare tutti i numeri pari sotto a quello che lo inserisci \n");
+        printf("scegli ("BLUE"7"RESET")per stampare tutti i numeri dispari sotto a quello che lo inserisci \n");
+        printf("scegli ("BLUE"8"RESET")per stampare tutti i numeri pari sopra a quello che lo inserisci "BLUE"(ma devi inserire un limite massimo)"RESET" \n");
+        printf("scegli ("BLUE"9"RESET")per stampare tutti i numeri dispari sopra a quello che lo inserisci "BLUE"(ma devi inserire un limite massimo)"RESET" \n");
         printf("scegli ("BLUE"10"RESET")per fare il multiplicazione di numeri e con il numero che scegli te \n");
         printf("scegli ("BLUE"11"RESET") per fare alcune cose con le lettere (c'e' l'espiegazione nel ("BLUE"-1"RESET"))\n");
         printf("scegli ("BLUE"12"RESET")per trovare il fattore di un numero \n");
+        printf("scegli ("BLUE"13"RESET")per trovare il mcd di un numero \n");
         printf("scegli ("BLUE"-1"RESET") per per l'epiegazione di ongi opzione\n");
         printf("scegli ("BLUE"0"RESET") per uscire\n");
         printf(BOLD"tua scelta e' :\t"BLUE);
@@ -381,6 +382,13 @@ int main()
                     }
                     printf(BLUE"Il numero fattore del %d e' : %d\n",a,mult);
                 break;
+                case 13:
+
+                    printf(MAGENTA"Inserisci un numero:\n"RESET);
+                    scanf(" %d", &a);
+                    printf(MAGENTA"Inserisci un secondo numero:\n"RESET);
+                    scanf(" %d", &b);
+                    min=a;
                 default:
                     printf(MAGENTA"\n\terrore (non c'e' una scelta cosi')\n\t"RESET);
             }
