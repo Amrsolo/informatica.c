@@ -105,7 +105,7 @@ void CaricaArray(int arr[])
         scanf("%d", &arr[i]);
     }
 }
-
+        
 void StampaArray(int arr[]) 
 {
 	int i;

@@ -84,7 +84,7 @@ void inverti_cifre(int x)
 {
     int invert = 0;
 
-    while (numero != 0) {
+    while (numero!= 0) {
         invert = invert * 10 + numero % 10;
         numero /= 10; 
     }
