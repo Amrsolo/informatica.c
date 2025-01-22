@@ -1,27 +1,28 @@
 #include<stdio.h>
 
 
-void area_rettangolo(int x,int y)
+int area_rettangolo(int x,int y)
 {
-    int a=0;
-    a=x*y;
-    printf("\nl'area = %d \n",a);
+    return x*y:
+    
 }
-void mcd(int x,int y)
+int mcd(int x,int y)
 {
-    int mcd,i;
-    int min = x;
-    if (y < min) min = y;
-
-    for (i = min; i > 0; i--) {
-        if (x % i == 0 && y % i == 0) {
-            mcd = i;
-            break;  // Uscire dal ciclo quando troviamo il massimo divisore comune
+    while(x!=y)
+    {
+        if(x>y)
+        {
+            x=x-y;
+        }
+        else
+        {
+            y=y-x;
         }
     }
-    printf("\nIl MCD dei due numeri è: %d\n", mcd);
+
+    return x;
 }
-void somma_divisori(int x)
+int somma_divisori(int x)
 {
     int somma=0,i;
     
@@ -37,7 +38,7 @@ void somma_divisori(int x)
     printf("la somma dei divisori = %d \n",somma);
 
 }
-void pari_dispari(int x)
+int pari_dispari(int x)
 {  
     if(x%2==0)
     {
@@ -48,13 +49,13 @@ void pari_dispari(int x)
         printf("\n1\n");
     }
 }
-void cifra_1(int x)
+int cifra_1(int x)
 {
     int num=0;
     num+=x%10;
     printf("\nil numero dell'ultima cifra = %d\n",num);
 }
-void somma_cifre(int x)
+int somma_cifre(int x)
 {
     /*
     Scrivi una funzione che trovi la somma
@@ -69,7 +70,7 @@ void somma_cifre(int x)
     }
     printf("\nla somma = %d\n",somma);
 }
-void cont_cifre(int x)
+int cont_cifre(int x)
 {
     int cont=0,i;
     while(x!=0)
@@ -80,7 +81,7 @@ void cont_cifre(int x)
     }
     printf("\nhai messo %d cifre\n",cont);
 }
-void inverti_cifre(int x) 
+int inverti_cifre(int x) 
 {
     int invert = 0;
 
@@ -93,7 +94,7 @@ void inverti_cifre(int x)
 }
 int main()
 {
-    int a,b,c,d;
+    int a,b,c,d,r;
 
     printf("inserici il primo numero \n");
     scanf("%d",&a);
@@ -103,8 +104,10 @@ int main()
     scanf("%d",&c);
     
 
-    area_rettangolo(a,b);
-    mcd(a,b);
+    r=area_rettangolo(a,b);
+    printf("l'area rettangolo = %d",r);
+    r=mcd(a,b);
+    printf("mcd di a = %d",r);
     somma_divisori(a);
     cifra_1(c);
     somma_cifre(c);
