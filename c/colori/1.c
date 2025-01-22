@@ -32,9 +32,23 @@ int main() {
     printf(CLEAR_SCREEN);
 
     // Test dei colori del testo
-    printf(UNDERLINE "Questo è un testo rosso!\n" RESET);
-    printf(BOLD "Questo è un testo verde!\n" RESET);
-    printf(CYAN "Questo è un testo blu!\n" RESET);
+    printf(UNDERLINE "allora cosi capici\n" RESET);printf(RESET);
+    printf(BOLD "allora cosi capici\n" RESET);
+    printf(CYAN "allora cosi capici\n" RESET);
+    printf(BLACK "allora cosi capici\n" RESET);
+    printf(RED "allora cosi capici\n" RESET);
+    printf(GREEN "allora cosi capici\n" RESET);
+    printf(BLUE "allora cosi capici\n" RESET);
+    printf(YELLOW "allora cosi capici\n" RESET);
+    printf(MAGENTA "allora cosi capici\n" RESET);
+    printf(WHITE "allora cosi capici\n" RESET);
+    printf("\n\n");
+    printf(BACK_BLACK "allora cosi capici\n" RESET);
+    printf(BACK_RED "allora cosi capici\n" RESET);
+    printf(BACK_GREEN "allora cosi capici\n" RESET);
+    printf(BACK_CYAN "allora cosi capici\n" RESET);
+    printf(CYAN "allora cosi capici\n" RESET);
+    
     /*
     // Test dello sfondo colorato
     printf(BACK_YELLOW BLACK "Testo con sfondo giallo e testo nero\n" RESET);
