@@ -13,6 +13,7 @@ int pari_dispari(int x);
 int cifra_1(int x);
 int somma_cifre(int x);
 int cont_cifre(int x);
+int somma_due_num(int x,int y);
 
 void menu();
 
@@ -33,6 +34,7 @@ void menu() {
         printf("5."MAGENTA" Trova l'ultima cifra di un numero\n"RESET);
         printf("6."MAGENTA" Somma delle cifre di un numero\n"RESET);
         printf("7."MAGENTA" Conta le cifre di un numero\n"RESET);
+        printf("8."MAGENTA" dammi due numeri per fare sequenza di Fibonacci corrispondente\n"RESET);
         printf("0. Esci\n");
         printf(BOLD"Scegli un'opzione: "RESET);
         scanf("%d", &scelta);
@@ -84,6 +86,13 @@ void menu() {
                 ris = cont_cifre(a);
                 printf(BOLD"Il numero %d ha %d cifre.\n", a, ris);
                 break;
+            case 8:
+                printf(MAGENTA"dammi il numero inziale\n"RESET);
+                scanf("%d",&a);
+                printf(MAGENTA"dammi il numero finale\n"RESET);
+                scanf("%d",&b);
+                ris=somma_due_num(a,b);
+                break;
             case 0:
                 printf(BOLD"Uscita dal programma.\n");
                 break;
@@ -98,7 +107,8 @@ void menu() {
 Scrivere una funzione chiamata "area_rettangolo" che prende in input la base e l'altezza di un rettangolo e restituisce l'area. 
 */
 
-int area_rettangolo(int x, int y) {
+int area_rettangolo(int x, int y) 
+{
     return x * y;
 }
 
@@ -107,7 +117,8 @@ Scrivere una funzione chiamata "mcd" che prende in input due numeri interi e res
 massimo comune divisore utilizzando l'algoritmo di Euclide. 
 */
 
-int mcd(int x, int y) {
+int mcd(int x, int y) 
+{
     while (x != y) {
         if (x > y) {
             x = x - y;
@@ -122,7 +133,8 @@ int mcd(int x, int y) {
 Scrivere una funzione chiamata "somma_divisori" che prende in input un numero intero e restituisce la somma dei suoi divisori.
 */
 
-int somma_divisori(int x) {
+int somma_divisori(int x) 
+{
     int somma = 0;
     for (int i = 1; i <= x; i++) {
         if (x % i == 0) {
@@ -136,7 +148,8 @@ int somma_divisori(int x) {
 Scrivere la funzione int pari_dispari(in numero), attraverso sottrazioni successive 
 determinare se il numero passato alla funzione è pari o dispari, restituire 0 (zero) se il numero è pari, 1 se dispari.
 */
-int pari_dispari(int x) {
+int pari_dispari(int x) 
+{
     return x % 2;
 }
 
@@ -144,7 +157,8 @@ int pari_dispari(int x) {
 stampa l'ultimo numero(cifra) da un numero grande
 */
 
-int cifra_1(int x) {
+int cifra_1(int x) 
+{
     return x % 10;
 }
 
@@ -154,7 +168,8 @@ delle cifre di un dato numero intero.
 Ad esempio, la somma delle cifre di 123 è 6.
 */
 
-int somma_cifre(int x) {
+int somma_cifre(int x) 
+{
     int somma = 0;
     while (x != 0) {
         somma += x % 10;
@@ -165,11 +180,23 @@ int somma_cifre(int x) {
 /*
 conta quanti cifre ho scritto
 */
-int cont_cifre(int x) {
+int cont_cifre(int x) 
+{
     int cont = 0;
     while (x != 0) {
         x /= 10;
         cont++;
     }
     return cont;
+}
+/*
+Scrivere una funzione che prende in input un numero intero e restituisce la sua sequenza di Fibonacci corrispondente stampandola a schermo.
+*/
+int somma_due_num(int x,int y)
+{   
+    int i,somma=0;
+    for(i=x,;i>=y;i++)
+    {
+        somma+=
+    }
 }
