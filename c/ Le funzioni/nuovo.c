@@ -92,6 +92,7 @@ void menu() {
                 printf(MAGENTA"dammi il numero finale\n"RESET);
                 scanf("%d",&b);
                 ris=somma_due_num(a,b);
+                printf(BOLD"la somma dei numeri sono %d\n",ris);
                 break;
             case 0:
                 printf(BOLD"Uscita dal programma.\n");
@@ -195,8 +196,9 @@ Scrivere una funzione che prende in input un numero intero e restituisce la sua 
 int somma_due_num(int x,int y)
 {   
     int i,somma=0;
-    for(i=x,;i>=y;i++)
+    for(i=x;i<=y;i++)
     {
-        somma+=
+        somma+=i;
     }
+    return somma;
 }
