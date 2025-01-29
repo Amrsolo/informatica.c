@@ -87,10 +87,11 @@ void menu() {
                 printf(BOLD"Il numero %d ha %d cifre.\n", a, ris);
                 break;
             case 8:
-                printf(MAGENTA"dammi il numero inziale\n"RESET);
-                scanf("%d",&a);
-                printf(MAGENTA"dammi il numero finale\n"RESET);
+                printf(MAGENTA" il numero inziale e' 0\n"RESET);
+                
+                printf(MAGENTA"dammi il numero  numeri di Fibonacci \n"RESET);
                 scanf("%d",&b);
+                a=1;
                 ris=somma_due_num(a,b);
                 printf(BOLD"la somma dei numeri sono %d\n",ris);
                 break;
@@ -195,10 +196,11 @@ Scrivere una funzione che prende in input un numero intero e restituisce la sua 
 */
 int somma_due_num(int x,int y)
 {   
-    int i,somma=0;
-    for(i=x;i<=y;i++)
+    int i,somma=1;
+    for(i=x;i<y;i++)
     {
         somma+=i;
+        
     }
     return somma;
 }
