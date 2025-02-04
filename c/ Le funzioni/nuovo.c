@@ -13,7 +13,8 @@ int pari_dispari(int x);
 int cifra_1(int x);
 int somma_cifre(int x);
 int cont_cifre(int x);
-int somma_due_num(int x,int y);
+void somma_due_num(int x,int y);
+int inverte_le_cifre(int x);
 
 void menu();
 
@@ -35,6 +36,7 @@ void menu() {
         printf("6."MAGENTA" Somma delle cifre di un numero\n"RESET);
         printf("7."MAGENTA" Conta le cifre di un numero\n"RESET);
         printf("8."MAGENTA" dammi due numeri per fare sequenza di Fibonacci corrispondente\n"RESET);
+        printf("9."MAGENTA" dammmi un numero fatto da almeno 2 cifre per invertirlo\n"RESET);
         printf("0. Esci\n");
         printf(BOLD"Scegli un'opzione: "RESET);
         scanf("%d", &scelta);
@@ -92,8 +94,13 @@ void menu() {
                 printf(MAGENTA"dammi il numero  numeri di Fibonacci \n"RESET);
                 scanf("%d",&b);
                 a=1;
-                ris=somma_due_num(a,b);
-                printf(BOLD"la somma dei numeri sono %d\n",ris);
+                somma_due_num(a,b);
+                break;
+            case 9:
+                printf(MAGENTA"inserisci il numero\n"RESET);
+                scanf("%d",&a);
+                ris=inverte_le_cifre(a);
+                printf(BOLD"il numero prima era %d e adesso = %d",a,ris);
                 break;
             case 0:
                 printf(BOLD"Uscita dal programma.\n");
@@ -194,13 +201,42 @@ int cont_cifre(int x)
 /*
 Scrivere una funzione che prende in input un numero intero e restituisce la sua sequenza di Fibonacci corrispondente stampandola a schermo.
 */
-int somma_due_num(int x,int y)
+void somma_due_num(int x,int y)
 {   
-    int i,somma=1;
-    for(i=x;i<y;i++)
-    {
-        somma+=i;
-        
+   int a = 0, b = 1, r;
+    printf("Sequenza di Fibonacci fino a %d termini:\n", y);
+    
+    for (int i = 0; i < y; i++) {
+        printf("%d ", a);
+        r = a + b;
+        a = b;
+        b = r;
     }
-    return somma;
+    printf("\n");
+}
+/*
+Scrivi una funzione che inverte le cifre del numero intero passato come argomento.
+ Ad esempio, dato l'intero 567, la funzione restituisce 765.
+ Prova il programma con numeri interi con diversi numeri di cifre.
+*/
+int inverte_le_cifre(int x)
+{
+    int inv=0,b=0,cont=0,a,i;
+    a=x;
+    while (x != 0) 
+    {
+        x /= 10;
+        cont++;
+    }
+
+    for(i=1;i<=cont;i++)
+    {
+        inv = a % 10;
+        a /= 10;
+        b += inv;
+        if (a != 0)  
+            b *= 10;
+    }
+
+    return b;
 }
