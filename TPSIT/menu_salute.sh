@@ -14,49 +14,47 @@ menu() {
 
 # Funzione per eseguire le operazioni
 codice() {
-    
-        if [$cscelta -eq 1];
-        then
+    cscelta=$1  # Assegna il valore passato alla funzione
 
-            echo "Inserisci il primo numero:"
-            read num1
-            echo "Inserisci il secondo numero:"
-            read num2
-            echo "La somma è: $((num1 + num2))"
-            ;;
-        elif[]
-            echo "Inserisci il primo numero:"
-            read num1
-            echo "Inserisci il secondo numero:"
-            read num2
-            if [ $num2 -ne 0 ]; then
-                echo "La divisione è: $((num1 / num2))"
-            else
-                echo "Errore: Divisione per zero!"
-            fi
-            ;;
-        3)
-            echo "Inserisci il primo numero:"
-            read num1
-            echo "Inserisci il secondo numero:"
-            read num2
-            echo "La moltiplicazione è: $((num1 * num2))"
-            ;;
-        4)
-            echo "Inserisci il primo numero:"
-            read num1
-            echo "Inserisci il secondo numero:"
-            read num2
-            echo "La sottrazione è: $((num1 - num2))"
-            ;;
-        0)
-            echo "Uscita dal programma."
-            exit 0
-            ;;
-        *)
-            echo "Opzione non valida. Riprova."
-            ;;
-    esac
+    if [ "$cscelta" -eq 1 ]; then
+        echo "Inserisci il primo numero:"
+        read num1
+        echo "Inserisci il secondo numero:"
+        read num2
+        echo "La somma è: $((num1 + num2))"
+
+    elif [ "$cscelta" -eq 2 ]; then
+        echo "Inserisci il primo numero:"
+        read num1
+        echo "Inserisci il secondo numero:"
+        read num2
+        if [ "$num2" -ne 0 ]; then
+            echo "La divisione è: $((num1 / num2))"
+        else
+            echo "Errore: divisione per zero non consentita."
+        fi
+
+    elif [ "$cscelta" -eq 3 ]; then
+        echo "Inserisci il primo numero:"
+        read num1
+        echo "Inserisci il secondo numero:"
+        read num2
+        echo "La moltiplicazione è: $((num1 * num2))"
+
+    elif [ "$cscelta" -eq 4 ]; then
+        echo "Inserisci il primo numero:"
+        read num1
+        echo "Inserisci il secondo numero:"
+        read num2
+        echo "La sottrazione è: $((num1 - num2))"
+
+    elif [ "$cscelta" -eq 0 ]; then
+        echo "Uscita dal programma."
+        exit 0
+
+    else
+        echo "Opzione non valida. Riprova."
+    fi
 }
 
 # Ciclo principale
@@ -64,6 +62,6 @@ while true; do
     menu
     echo "Seleziona un'opzione:"
     read scelta
-    codice $scelta
+    codice "$scelta"
     echo ""
 done
