@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Credenziali predefinite
-USERNAME_CORRETTO="ahmed.elsayed"
-PASSWORD_CORRETTA="Amr.102939"
+USERNAME_CORRETTO="zio Amr"
+PASSWORD_CORRETTA="123456789"
 
 # Richiedi nome utente
 echo -n "Inserisci il nome utente: "
