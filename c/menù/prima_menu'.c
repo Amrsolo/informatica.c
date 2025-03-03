@@ -10,7 +10,7 @@
 
 int main()
 {
-    int scelta,scelta2,somma=0,cont=0,mult=1,a,b,i,b1,a1;
+    int scelta,scelta2,somma=0,cont=0,mult=1,a,b,i,b1,a1,min;
     char a2;
     float media=0,div=1;
     
@@ -383,7 +383,7 @@ int main()
                     printf(BLUE"Il numero fattore del %d e' : %d\n",a,mult);
                 break;
                 case 13:
-
+                    
                     printf(MAGENTA"Inserisci un numero:\n"RESET);
                     scanf(" %d", &a);
                     printf(MAGENTA"Inserisci un secondo numero:\n"RESET);

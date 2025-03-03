@@ -5,16 +5,51 @@ void CaricaArray(int v1[],int v2[]);
 void stampaarray(int v1[],int v2[]);
 int num_max(int v1[],int v2[]);
 void InvertiAltroVettore(int v1[ ], int v2[ ],int v3[ ]);
+int ricercaElemento(int v1[ ], int x);
+void azzeraVettore(int v1[]);
+void menu(int scelta);
 int main()
 {
-    int numeri[N],r,numeri2[N],numeri3[N];
+    int numeri[N],r,numeri2[N],numeri3[N],a;
+    printf("inserisci un numero per trovare\n");
+    scanf("%d",&a);
 
     CaricaArray(numeri,numeri2);
     stampaarray(numeri,numeri2);
     r=num_max(numeri,numeri2);
     printf("il numero massimo dalla sequenza di numeri e' %d\n",r);
     InvertiAltroVettore(numeri,numeri2,numeri3);
+    r=ricercaElemento(numeri,a);
+    printf("il numero e' %d\n",r);
+    azzeraVettore(numeri);
     return 0;
+}
+void menu(int scelta)
+{
+    int numeri[N],r,numeri2[N],numeri3[N],a;
+    switch (scelta)
+    {
+        case 1:
+            CaricaArray(numeri,numeri2);
+        break;
+        case 2:
+            stampaarray(numeri,numeri2);
+        break;
+        case 3:
+            r=num_max(numeri,numeri2);
+            printf("il numero massimo dalla sequenza di numeri e' %d\n",r);
+        break;
+        case 4:
+            InvertiAltroVettore(numeri,numeri2,numeri3);
+        break;
+        case 5:
+            r=ricercaElemento(numeri,a);
+            printf("il numero e' %d\n",r);
+        break;
+        case 6:
+        
+        break;
+    }
 }
 
 void CaricaArray(int v1[],int v2[])
@@ -59,6 +94,13 @@ int num_max(int v1[],int v2[])
             max = v1[i];
         }
     }
+    for(i = 1; i < N; i++) 
+    {
+        if(v2[i] > max) 
+        {
+            max = v2[i];
+        }
+    }
 
     return max; 
 }
@@ -81,5 +123,32 @@ void InvertiAltroVettore(int v1[ ], int v2[ ],int v3[ ])
     for(i=0;i<N;i++)
     {
         printf("%d \t%d\n",v1[i],v2[i]);
+    }
+}
+
+int ricercaElemento(int v1[ ], int x) 
+{
+    int i;
+    for(i=0;i<N;i++)
+    {
+        if(x==v1[i])
+        {
+            return x;
+        }
+    }
+    return -1;
+}
+
+void azzeraVettore(int v1[])
+{
+    int i;
+    
+    for(i=0;i<N;i++)
+    {
+        v1[i]=0;
+    }
+    for(i=0;i<N;i++)
+    {     
+        printf("i vettori adesso = %d",v1[i]);
     }
 }
