@@ -1,0 +1,16 @@
+#include<stdio.h>
+#define   N 10
+
+void carica()
+int main()
+{
+    int num[N],a,b;
+
+    printf("Inserisci un intero: ");
+    scanf("%d", &a);
+    printf("Inserisci un intero: ");
+    scanf("%d", &b);
+
+
+    return 0;
+}

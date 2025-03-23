@@ -16,6 +16,7 @@ int cont_cifre(int x);
 void somma_due_num(int x,int y);
 int inverte_le_cifre(int x);
 int somma(int x);
+int fattoriale(int x);
 
 void menu();
 
@@ -25,7 +26,7 @@ int main() {
 }
 
 void menu() {
-    int scelta, a, b, c, ris;
+    int scelta, a, b, c, ris,fat=1;
 
     do {
         printf(BOLD"\n--- MENU ---\n"RESET);
@@ -38,7 +39,7 @@ void menu() {
         printf("7."MAGENTA" Conta le cifre di un numero\n"RESET);
         printf("8."MAGENTA" dammi due numeri per fare sequenza di Fibonacci corrispondente\n"RESET);
         printf("9."MAGENTA" dammmi un numero fatto da almeno 2 cifre per invertirlo\n"RESET);
-        printf("10."MAGENTA" dammmi un numero fatto da almeno 2 cifre per invertirlo\n"RESET);
+        printf("10."MAGENTA" dammmi un numero intero per trovare il suo fattoriale\n"RESET);
         printf("11."MAGENTA" per fare la somma di una sequenza di numeri \n"RESET);
         printf("0. Esci\n");
         printf(BOLD"Scegli un'opzione: "RESET);
@@ -105,7 +106,11 @@ void menu() {
                 ris=inverte_le_cifre(a);
                 printf(BOLD"il numero prima era %d e adesso = %d",a,ris);
                 break;
-            case 10:
+            case 10:    
+                printf(MAGENTA"inserisci il numero\n"RESET);
+                scanf("%d",&a);
+                ris=fattoriale(a);
+                printf(BOLD"il fattoriale di %d e' %d",a,ris);
                 break;
             case 11:
                 ris=somma(a);
@@ -283,4 +288,15 @@ int somma(int x)
         somma+=y;
     }
     return somma;
+}
+
+int fattoriale(int x)
+{
+    int fatt=1,num=1;
+    while(num<=x)
+    {
+        fatt*=num;
+        num++;
+    }
+    return fatt;
 }
