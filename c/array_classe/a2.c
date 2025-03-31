@@ -30,10 +30,11 @@ void carica_interi(float v[])
 }
 float somma(float v[])
 {
-    int i,somma=0;
+    int i;
+    float somma=0;
     for(i=0;i<N;i++)
     {
-        somma+=v[i];
+        somma+=(float)v[i];
     }
     return somma;
 }
