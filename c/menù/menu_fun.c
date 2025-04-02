@@ -41,6 +41,8 @@ void menu() {
         printf("9."MAGENTA" dammmi un numero fatto da almeno 2 cifre per invertirlo\n"RESET);
         printf("10."MAGENTA" dammmi un numero intero per trovare il suo fattoriale\n"RESET);
         printf("11."MAGENTA" per fare la somma di una sequenza di numeri \n"RESET);
+        printf("11."MAGENTA" per fare la somma di una sequenza di numeri \n"RESET);
+        printf("11."MAGENTA" per fare la somma di una sequenza di numeri \n"RESET);
         printf("0. Esci\n");
         printf(BOLD"Scegli un'opzione: "RESET);
         scanf("%d", &scelta);
