@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <limits.h>
 #define RED         "\033[31m"
 #define RESET       "\033[0m"
 #define BLUE        "\033[34m"
@@ -53,7 +54,7 @@ int main()
     do
     {
         
-        printf("\nscegli ("BLUE"1"RESET") per fare la somma di una sequenza di numeri\n");
+        printf(RESET"\nscegli ("BLUE"1"RESET") per fare la somma di una sequenza di numeri\n");
         printf("scegli ("BLUE"2"RESET") per fare la media di una sequenza di numeri\n");
         printf("scegli ("BLUE"3"RESET") per fare il divisore di una sequenza di numeri\t" RED "(scusate il case 3 non funziona per adesso)\n" RESET );
         printf("scegli ("BLUE"4"RESET")per fare la multiplicazione di una sequenza di numeri\n");
@@ -236,12 +237,12 @@ int main()
                         printf(MAGENTA"inserisci un limite massimo \n"RESET );
                         scanf("%d",&b );
                         
-                        printf(MAGENTA"i numeri dispari che sono sopra il "BLUE" %d "RESET" = \n"RESET,a );
+                        printf(MAGENTA"i numeri pari che sono sopra il "BLUE" %d "RESET" = \n"RESET,a );
                         
                         do
                         {
                             a++;
-                            if(a%2==1)
+                            if(a%2==0)
                             {
                                 printf(BLUE"%d\n"RESET,a );
                             }
@@ -253,12 +254,12 @@ int main()
                         scanf("%d",&a );
                         printf(MAGENTA"inserisci un limite massimo \n"RESET);
                         scanf("%d",&b );
-                        printf(MAGENTA"i numeri pari che sono sopra il"BLUE" %d "RESET"= \n"RESET,a);
+                        printf(MAGENTA"i numeri dispari che sono sopra il"BLUE" %d "RESET"= \n"RESET,a);
                         
                         do
                         {
                             a++;
-                            if(a%2==0)
+                            if(a%2==1)
                             {
                                 printf(BLUE"%d\n"RESET,a );
                             }

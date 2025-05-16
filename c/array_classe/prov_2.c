@@ -32,7 +32,7 @@ void carica_random(int m[][C])
     {
         for(j=0;j<C;j++)
         {
-            m[i][j]=rand() % 40 - 2;  // Genera numeri tra -2 e 37
+            m[i][j]=rand() % 20+10;  // Genera numeri tra -2 e 37
         }
     }
 }
@@ -93,9 +93,9 @@ void stampa_mat1(int m[][C])
 
 void cambia_righe(int m[][C])
 {
-    int a,i,j;
+    int a,i=0,j;
 
-    for(j=0;i<R;j++)
+    for(j=0;j<C;j++)
     {
         a=m[i][j];
         m[i][j]=m[i+1][j];
@@ -117,3 +117,4 @@ void stampa_mat2(int m[][C])
         printf("\n\n");
     }
 }
+
