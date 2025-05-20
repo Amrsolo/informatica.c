@@ -2,7 +2,7 @@
 #define C 5
 #define R 5
 void carica(int m[][C],int x);
-void stampa(int m[][C])
+void stampa(int m[][C]);
 void sostetuire(int m[][C],int x,int y);
 
 int main()
@@ -40,7 +40,7 @@ void stampa(int m[][C])
         printf("\n\n");
         for(j=0;j<R;j++)
         {
-            printf("&d",m[i][j];)
+            printf("%d\t",m[i][j]);
         }
     }
 }
