@@ -1,0 +1,39 @@
+header
+{
+    background-color: black;
+}
+
+.head
+{
+    background-color: black;
+}
+.head1
+{
+    background-color: black;
+    color: bisque;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.head2
+{
+    background-color: black;
+    color: rgb(255, 213, 163);
+    text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+.scelta
+{
+    background-color: black;
+    color: rgb(185, 185, 185);
+    text-align: left;
+}
+.bmwhead1
+{   
+    background-image: url(https://www.autoscout24.it/cms-content-assets/3jjPIfXcahiwKMDuM9Vg7f-8781002d98cacfa1c804fb0dd2a454b3-BMW-M5-2025-1-1100.jpg);
+    color: rgb(0, 8, 169);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
