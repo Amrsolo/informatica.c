@@ -1,37 +1,48 @@
 header
 {
-    background-color: black;
-}
 
+}
+#imagina
+{
+    background-image: url(https://www.motortrend.com/uploads/sites/5/2019/02/Throttle-Out-2019-Yamaha-YZF-R1M-with-AMG-GT-R-Miata-and-Corvette.jpg);
+    background-color: black;
+    font-style: normal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 .head
 {
-    background-color: black;
+   
 }
 .head1
 {
-    background-color: black;
-    color: bisque;
+   
+    color: rgb(0, 0, 0);
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     
 }
 .head2
 {
-    background-color: black;
-    color: rgb(255, 213, 163);
-    text-align: left;
+  
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-style: italic;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     
 }
 .scelta
 {
-    background-color: black;
-    color: rgb(185, 185, 185);
-    text-align: left;
+
+     color: #f8f9fa;
+  margin: 0 20px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 .bmwhead1
 {   
-    background-image: url(https://www.autoscout24.it/cms-content-assets/3jjPIfXcahiwKMDuM9Vg7f-8781002d98cacfa1c804fb0dd2a454b3-BMW-M5-2025-1-1100.jpg);
+    background-image: url(https://img.gta5-mods.com/q95/images/2021-bmw-m5-cs-add-on-extras/cab1ae-GHF.JPG); 
     color: rgb(0, 8, 169);
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
