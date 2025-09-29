@@ -153,13 +153,24 @@ void azzeraVettore(int arr[])
 
 void copiaPari(int v1[], int v2[]) 
 {
-    int i,j = 0;
-    for ( i = 0; i < N; i++) {
+    int i, j = 0;
+    // Azzera tutto v2
+    for (i = 0; i < N; i++) {
+        v2[i] = 0;
+    }
+    // Copia solo i pari
+    for (i = 0; i < N; i++) {
         if (v1[i] % 2 == 0) {
             v2[j] = v1[i];
             j++;
         }
     }
+    // Stampa solo i numeri pari copiati
+    printf("Elementi pari copiati in voti2: ");
+    for (i = 0; i < j; i++) {
+        printf("%d ", v2[i]);
+    }
+    printf("\n");
 }
 
 int trovaMax(int v[]) 
